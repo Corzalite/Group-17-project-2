@@ -6,7 +6,7 @@
 CREATE TABLE "category" (
     "category_id" VARCHAR(5)   NOT NULL,
     "category" VARCHAR(100)   NOT NULL,
-    "last_updated" DATE   NOT NULL,
+    "last_updated" LOCALTIMESTAMP   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
         "category_id"
      )
@@ -15,7 +15,7 @@ CREATE TABLE "category" (
 CREATE TABLE "subcategory" (
     "subcategory_id" VARCHAR(8)   NOT NULL,
     "subcategory" VARCHAR(100)   NOT NULL,
-    "last_updated" DATE   NOT NULL,
+    "last_updated" LOCALTIMESTAMP   NOT NULL,
     CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
      )
@@ -26,7 +26,7 @@ CREATE TABLE "contacts" (
     "first_name" VARCHAR(100)   NOT NULL,
     "last_name" VARCHAR(250)   NOT NULL,
     "email" VARCHAR(250)   NOT NULL,
-    "last_updated" DATE   NOT NULL,
+    "last_updated" LOCALTIMESTAMP   NOT NULL,
     CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
      )
@@ -47,7 +47,7 @@ CREATE TABLE "campaign" (
     "end_date" DATE   NOT NULL,
     "category_id" VARCHAR(5)   NOT NULL,
     "subcategory_id" VARCHAR(100)   NOT NULL,
-    "last_updated" DATE   NOT NULL
+    "last_updated" LOCALTIMESTAMP   NOT NULL
 );
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
