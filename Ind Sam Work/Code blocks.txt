@@ -1,0 +1,93 @@
+# Load the data
+campaign_df = pd.read_csv('CSV/campaign.csv')
+category_df = pd.read_csv('CSV/category.csv')
+subcategory_df = pd.read_csv('CSV/subcategory.csv')
+contacts_df = pd.read_csv('CSV/contacts.csv')
+
+# Print column names to verify
+print("Campaign DF columns:", campaign_df.columns)
+print("Category DF columns:", category_df.columns)
+print("Subcategory DF columns:", subcategory_df.columns)
+print("Contacts DF columns:", contacts_df.columns)
+
+# Check for the presence of 'category_id' and 'subcategory_id'
+if 'category_id' in campaign_df.columns and 'subcategory_id' in campaign_df.columns:
+    # Merge the dataframes
+    merged_df = campaign_df.merge(category_df, how='left', on='category_id')\
+                           .merge(subcategory_df, how='left', on='subcategory_id')\
+                           .merge(contacts_df, how='left', on='contact_id')
+    print("Merge successful. Merged DataFrame:")
+    print(merged_df.head())
+else:
+    print("One or more required columns are missing in the campaign DataFrame.")
+
+
+# Filter data for specific countries
+filtered_df = merged_df[merged_df['country'].isin(['US', 'CA', 'CH', 'AU'])]
+
+# Scatter plot with seaborn
+plt.figure(figsize=(12, 8))
+scatter_plot = sns.scatterplot(data=filtered_df, x='goal', y='pledged', hue='backers_count', style='country', palette='viridis', size='backers_count', sizes=(20, 200))
+
+# Add labels and title
+scatter_plot.set_xlabel('Goal')
+scatter_plot.set_ylabel('Pledged')
+scatter_plot.set_title('East vs West, (US, CA, CH, AU)')
+
+# Display the plot
+plt.legend(title='Backers Count')
+plt.show()
+
+
+# Filter data for specific countries, East v West
+filtered_df = merged_df[merged_df['country'].isin(['US', 'CA', 'CH', 'AU'])]
+
+# Scatter plot with seabees
+plt.figure(figsize=(12, 8))
+scatter_plot = sns.scatterplot(data=filtered_df, x='goal', y='pledged', hue='outcome', style='country', palette='mako', size='backers_count', sizes=(20, 200))
+
+# Add labels and title
+scatter_plot.set_xlabel('Goal')
+scatter_plot.set_ylabel('Pledged')
+scatter_plot.set_title('East vs West, outcomes. (US, CA, CH, AU)')
+
+# show me the money
+plt.legend(title='Outcome')
+plt.show()
+
+
+# Filter data for specific countries
+filtered_df = merged_df[merged_df['country'].isin(['US', 'CA', 'CH', 'AU'])]
+
+# Scatter plot with seaborn
+plt.figure(figsize=(12, 8))
+
+# Add scatter plot
+scatter_plot = sns.scatterplot(data=filtered_df, x='goal', y='pledged', hue='backers_count', style='country', palette='viridis', size='backers_count', sizes=(20, 200))
+
+# Add regression line
+sns.regplot(data=filtered_df, x='goal', y='pledged', scatter=False, ax=scatter_plot, color='blue')
+
+# Add labels and title
+scatter_plot.set_xlabel('Goal')
+scatter_plot.set_ylabel('Pledged')
+scatter_plot.set_title('East vs the West. Backers & Pledges (US, CA, CH, AU)')
+
+# Display the plot
+plt.legend(title='Backers Count')
+plt.show()
+
+
+
+# Filter data for specific countries
+filtered_df = merged_df[merged_df['country'].isin(['US', 'CA', 'CH', 'AU'])]
+
+# Scatter plot with regression lines using lmplot
+lmplot = sns.lmplot(data=filtered_df, x='goal', y='pledged', hue='outcome', col='outcome', row='country', palette='mako', height=4, aspect=1.2)
+
+# Add labels and title
+lmplot.set_axis_labels('Goal', 'Pledged')
+lmplot.fig.suptitle('International Campaigns and Outcome (US, CA, CH, AU) with Regression Line', y=1.03)
+
+# Display the plot
+plt.show()
