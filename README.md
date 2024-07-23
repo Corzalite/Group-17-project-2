@@ -86,7 +86,19 @@ Individual query and charting work done in [Ind Nick Work/ETL_Data_Viz](https://
 
 How do our selected countries compare when looking at set goals, pledged finances, and number of backers?
 
+The provided charts indicate a strong positive correlation between the funding goals and the pledged amounts, especially for successful projects, highlighting the importance of setting achievable and realistic goals. Higher backer counts generally lead to higher pledged amounts, emphasizing the need to engage and attract more backers for a successful campaign. The United States stands out as the dominant contributor, with significantly higher percentages of both backers and pledged amounts compared to other countries. Overall, while successful projects show consistent trends with high pledges and backer counts, failed and canceled projects exhibit more variability and inconsistency, underscoring the challenges in meeting high funding goals without sufficient support.
 
+[East vs West Regression.png](https://github.com/Corzalite/Group-17-project-2/blob/main/Charts/East%20vs%20West%20Regression.png)
 
+[East vs West, Success vs Failures.png](https://github.com/Corzalite/Group-17-project-2/blob/main/Charts/East%20vs%20West%2C%20Success%20vs%20Failures.png)
 
+The scatter plots reveal that successful projects tend to have tighter distributions and higher concentrations of data points along the regression lines, suggesting a more predictable and stable relationship between goals and pledged amounts. In contrast, failed and canceled projects display a broader spread, indicating less predictability and greater challenges in reaching their funding targets. This variability underscores the importance of strategic planning and effective marketing to ensure sufficient backer engagement and support.
+
+Additionally, the comparative analysis between different countries highlights significant disparities in contributions. The US, being a major player, shows a wide range of goals and pledged amounts, with larger backer counts correlating with higher pledges. Other countries like Canada, Australia, and China also contribute but to a lesser extent. These insights suggest that understanding and leveraging regional trends and backer behavior can be crucial for tailoring campaigns to maximize success. Overall, the data underscores the need for realistic goal-setting, robust backer engagement strategies, and awareness of regional dynamics to enhance the likelihood of successful crowdfunding campaigns.
+
+The third chart reinforces the positive correlation between funding goals and pledged amounts across various countries and outcomes. Successful projects consistently show strong positive trends with higher pledges, especially in the US and Canada, indicating that well-planned campaigns significantly impact funding success. In contrast, failed and canceled projects display more variability, highlighting the difficulties in reaching funding targets without adequate support. The data emphasizes the importance of setting realistic goals, effectively engaging backers, and considering regional trends to tailor campaigns for maximum success.
+
+[International scatter plot.png](https://github.com/Corzalite/Group-17-project-2/blob/main/Charts/International%20scatter%20plot.png)
+
+Individual query and charting work done in [Ind Sam Work/Data_Viz_Sam](https://github.com/Corzalite/Group-17-project-2/blob/main/Ind%20Sam%20Work/Data_Viz_Sam.ipynb). All required charting saved in [Charts](https://github.com/Corzalite/Group-17-project-2/tree/main/Charts) folder. 
 
