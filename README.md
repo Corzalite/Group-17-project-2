@@ -102,3 +102,16 @@ The third chart reinforces the positive correlation between funding goals and pl
 
 Individual query and charting work done in [Ind Sam Work/Data_Viz_Sam](https://github.com/Corzalite/Group-17-project-2/blob/main/Ind%20Sam%20Work/Data_Viz_Sam.ipynb). All required charting saved in [Charts](https://github.com/Corzalite/Group-17-project-2/tree/main/Charts) folder. 
 
+## Question 3
+
+How does the length of a campaign compare to the success/failure of our selected countries?
+
+Visualization of the data does not show a solid correlation between the length of the campaign and its success or failure. 
+
+[chart_all.png](https://github.com/Corzalite/Group-17-project-2/blob/main/Charts/chart_all.png)
+
+When looked by individual countries the US has successful campaigns across most days, but the least successful in the shortest and the longest days. Canada has the most success between approximately 225 and 250 days, China between 275 and 300, and Australia around 50 days. All countries had success with shorter and longer campaigns. 
+
+The length of the campaign is only one factor, other factors should be explored such as the type of play, the time of year in the specific country, the goal, etc.
+
+Individual query and charting work done in [IND_Marty_work/ETL_Data_Viz](https://github.com/Corzalite/Group-17-project-2/tree/main/IND_Marty_work). All required charting saved in [Charts](https://github.com/Corzalite/Group-17-project-2/tree/main/Charts) folder.
